@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./dist/output.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <section id="greeting" class="">
         <div id="greeting-start" class="h-screen bg-gradient-to-b from-[#FFC18E] via-[#FFE5B4] to-[#F7EDDB]  flex items-center justify-center absolute w-full z-[9999]">
-            <div class="block text-center">
+            <div class="block text-center" data-aos="fade-up" data-aos-duration="3000">
                 <p class="text-lg">GREETING CARD</p>
                 <h1 class="text-5xl font-serif italic font-bold mt-4 mb-6">Happy Birthday</h1>
                 <p class="text-xl mb-10">ALTHALINE GLORIA PANJAITAN</p>
@@ -22,7 +23,7 @@
         <div id="greeting-main" class="-z-[99999] hidden">
             <audio src="./dist/HBD.mp3" autoplay loop></audio>
             <canvas id = "snowCanvas1" class="absolute"></canvas>
-            <div class=" bg-gradient-to-t from-gray-400 via-gray-300 to-gray-200 flex  justify-center"><br>
+            <div class=" bg-gradient-to-t from-gray-400 via-gray-300 to-gray-200 flex  justify-center" data-aos="fade-up" data-aos-duration="3000"><br>
                 <img src="./dist/img/Frame 1.png" alt="" class="md:w-[1000px]">
             </div>
             <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
@@ -215,7 +216,7 @@
             <div id="greeting-wish" class="h-screen bg-gradient-to-b from-gray-400 via-gray-300 to-gray-200 mt-8">
                 <canvas id = "snowCanvas" class="absolute"></canvas>
                 <div class="flex items-center justify-center flex-col">
-                    <div class="wish block text-center text-2xl">
+                    <div class="wish block text-center text-2xl" data-aos="fade-up" data-aos-duration="3000">
                         <h1 class="mb-6 text-4xl font-bold italic">Wishes</h1>
                         <p class="mb-4">Halo Mbak Glo!!!</p>
                         <p class="mb-4">Happy Birthday yaa</p>
@@ -327,7 +328,9 @@
     
 
     <script src="./dist/snow.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init();
         start_btn = document.querySelector('.greeting-btn');
         start_btn.addEventListener('click', function(){
             document.querySelector('#greeting-start').classList.add('hidden');
